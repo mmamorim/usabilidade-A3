@@ -11,6 +11,8 @@ Servidor backend para controle das tarefas:
 
 [https://github.com/mmamorim/taskServer](https://github.com/mmamorim/taskServer)
 
+Este servidor (serviço) deve ser substituido pelo seu projeto das aulas da UC - Sistemas Distribuídos e Mobile.
+
 # Diretrizes para entrega
 
 * Grupos definidos em comum com a UC de Sistemas Distribuídos e Mobile
