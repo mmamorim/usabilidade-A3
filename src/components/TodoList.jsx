@@ -11,7 +11,7 @@ export default function TodoList() {
         console.log("data", data);
         let vetData = []
         for(let key in data) {
-            console.log("item",data[key]);            
+            //console.log("item",data[key]);            
             vetData.push(data[key])
         }
         console.log("vetData", vetData);
@@ -24,9 +24,9 @@ export default function TodoList() {
 
     return (
         <>
-            <TaskForm />
+            <TaskForm refresh={load} />
             {
-                tasks.map((tarefa) => <TaskItem nome={tarefa.nome} key={tarefa.id} done={tarefa.done} />)
+                tasks.map((tarefa) => <TaskItem nome={tarefa.nome} key={tarefa.id} id={tarefa.id} done={tarefa.done} refresh={load} />)
             }
         </>
     )

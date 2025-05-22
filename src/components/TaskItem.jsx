@@ -1,6 +1,18 @@
 import { Icon } from "@iconify/react";
 
-export default function TaskItem({ nome, id, done }) {
+export default function TaskItem({ nome, id, done, refresh }) {
+
+    async function excluir() {
+        console.log("excluir",id);
+        let res = await fetch("http://localhost:3000/tasks/"+id,
+            {
+                method: "DELETE"
+            }
+        )
+        let data = await res.json()    
+        console.log("resposta servidor",data);
+        refresh()    
+    }
 
     return (
         <>
@@ -22,7 +34,7 @@ export default function TaskItem({ nome, id, done }) {
                     <div className="border border-black rounded-2xl px-1.5 pt-1 bg-gray-400 text-white">
                         <Icon icon="mdi:pencil" />
                     </div>
-                    <div className="border border-black rounded-2xl px-1.5 pt-1 bg-red-800 text-white">
+                    <div onClick={excluir} className="border border-black rounded-2xl px-1.5 pt-1 bg-red-800 text-white">
                         <Icon icon="mdi:delete" />
                     </div>
                 </div>
