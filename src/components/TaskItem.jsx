@@ -1,17 +1,19 @@
 import { Icon } from "@iconify/react";
+import { useState } from "react";
+import TaskForm from "./TaskForm";
 
 export default function TaskItem({ nome, id, done, refresh }) {
 
     async function excluir() {
-        console.log("excluir",id);
-        let res = await fetch("http://localhost:3000/tasks/"+id,
+        console.log("excluir", id);
+        let res = await fetch("http://localhost:3000/tasks/" + id,
             {
                 method: "DELETE"
             }
         )
-        let data = await res.json()    
-        console.log("resposta servidor",data);
-        refresh()    
+        let data = await res.json()
+        console.log("resposta servidor", data);
+        refresh()
     }
 
     return (

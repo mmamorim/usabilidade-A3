@@ -19,6 +19,7 @@ export default function TaskForm({ refresh }) {
         })
         let data = await res.json()
         console.log("resposta servidor", data);
+        //close()
         refresh()
     }
 
