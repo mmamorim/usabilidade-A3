@@ -1,6 +1,5 @@
 import { Icon } from "@iconify/react";
 import { useState } from "react";
-import TaskForm from "./TaskForm";
 import Alterar from "./Alterar"
 
 export default function TaskItem({ id, nome, date, done, refresh }) {
