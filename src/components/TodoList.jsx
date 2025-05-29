@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import TaskItem from "./TaskItem";
-import DialogForm from "./DialogForm";
+import { Button } from "react-bootstrap";
 
 export default function TodoList() {
     const [tasks, setTasks] = useState([])
@@ -24,8 +24,8 @@ export default function TodoList() {
 
     return (
         <>
-            <DialogForm refresh={load} />
-            <button type="button" className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <Button variant="primary" size="sm">Primary</Button>
+            <button type="button" className="btn btn-primary">
                 Adicionar Tarefa
             </button>
             {

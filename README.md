@@ -5,6 +5,13 @@
 
 Este repositório contém um projeto base de exemplo para o projeto A3.
 
+Módulos instalados:
+  - React
+  - Iconify
+  - Tailwind
+  - Bootstrap
+  - react-bootstrap
+
 ## Requisito deste projeto:
 
 Servidor backend para controle das tarefas:
