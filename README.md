@@ -22,7 +22,8 @@ Este servidor (serviço) deve ser substituido pelo seu projeto das aulas da UC -
 
 # Diretrizes para entrega
 
-* Grupos definidos em comum com a UC de Sistemas Distribuídos e Mobile
+* Grupos definidos em comum com a UC de Sistemas Distribuídos e Mobile (prof. Danilo)
 * Criação de um App Frontend contendo
-  * Tela de login
-  * 2 CRUDs
+  * Tela de login acessando serviço (backend) - aulas prof. Danilo
+    * Permitir que o usuário se cadastre 
+  * pelo menos 2 CRUDs acessando serviço (backend) - aulas prof. Danilo
