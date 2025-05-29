@@ -1,9 +1,11 @@
 import { useState, useEffect } from "react";
 import TaskItem from "./TaskItem";
 import { Button } from "react-bootstrap";
+import Cadastro from "./Cadastro";
 
 export default function TodoList() {
     const [tasks, setTasks] = useState([])
+    const [cadastroShow, setCadastroShow] = useState(false)
 
     async function load() {
         let res = await fetch("http://localhost:3000/tasks/")
@@ -22,15 +24,21 @@ export default function TodoList() {
         load()
     }, [])
 
+    function handleClose() {
+
+    }
+
     return (
         <>
-            <Button variant="primary" size="sm">Primary</Button>
-            <button type="button" className="btn btn-primary">
-                Adicionar Tarefa
-            </button>
-            {
-                tasks.map((tarefa) => <TaskItem nome={tarefa.nome} key={tarefa.id} id={tarefa.id} done={tarefa.done} refresh={load} />)
-            }
+
+            <div className="w-120">
+                <div className="flex justify-start mx-2">
+                    <Cadastro refresh={load} />
+                </div>
+                {
+                    tasks.map((tarefa) => <TaskItem nome={tarefa.nome} key={tarefa.id} id={tarefa.id} done={tarefa.done} refresh={load} />)
+                }
+            </div>
         </>
     )
 }
